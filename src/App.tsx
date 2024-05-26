@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
+import BoardListItem from "./components/BoardListItem";
 
 function App() {
-  return (
-<></>
-  );
+    return (
+        <>
+            <BoardListItem/>
+        </>
+    );
 }
 
 export default App;
