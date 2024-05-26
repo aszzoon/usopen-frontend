@@ -10,7 +10,7 @@ export default function BoardListItem() {
             <div className='board-list-item-main-box'>
                 <div className='board-list-item-top'>
                     <div className='board-list-item-profile-box'>
-                        <div className='board-list-item-profile-image' style={{ backgroundImage: 'url()' }}></div>
+                        <div className='board-list-item-profile-image' style={{ backgroundImage: 'url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnFhZmF4YnluMTRza3h1cGRnaG45OWk5bWc0ODIwMTk4bXp1c2NibCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RLW9YEaSBfBMt79fm4/giphy.gif)' }}></div>
 
                     </div>
                     <div className='board-list-item-write-box'>
@@ -29,7 +29,7 @@ export default function BoardListItem() {
                 </div>
             </div>
             <div className='board-item-image-box'>
-                <div className='board-list-item-image'></div>
+                <div className='board-list-item-image' style={{ backgroundImage: 'url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnFhZmF4YnluMTRza3h1cGRnaG45OWk5bWc0ODIwMTk4bXp1c2NibCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RLW9YEaSBfBMt79fm4/giphy.gif)' }}></div>
             </div>
         </div>
     )
