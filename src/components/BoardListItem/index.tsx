@@ -1,36 +1,64 @@
 import React from 'react';
 import './style.css';
+import {BoardListItem} from 'types/interface';
+import {useNavigate} from "react-router-dom";
+
+interface Props {
+    boardListItem: BoardListItem
+}
 
 // component: board List Item 컴포넌트
-export default function BoardListItem() {
+export default function BoardListItem({boardListItem}: Props) {
+
+    // propertises //
+    const {boardNumber, title, content, boardTitleImage} = boardListItem;
+    const {favoriteCount, commentCount, viewCount} = boardListItem;
+    const {writeDatetime, writerNickname, writerProfileImage} = boardListItem;
+
+    // function : 내비게이트 함수 //
+
+    const navigator = useNavigate();
+
+    // event handler : 게시물 아이템 클릭 이벤트 처리함수 //
+
+    const onClickHandler = () => {
+        navigator(boardNumber);
+    }
 
     // render : Board List Item 컴포넌트 렌더링
     return (
-        <div className='board-list-item'>
+        <div className='board-list-item' onClick={onClickHandler}>
             <div className='board-list-item-main-box'>
                 <div className='board-list-item-top'>
                     <div className='board-list-item-profile-box'>
-                        <div className='board-list-item-profile-image' style={{ backgroundImage: 'url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnFhZmF4YnluMTRza3h1cGRnaG45OWk5bWc0ODIwMTk4bXp1c2NibCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RLW9YEaSBfBMt79fm4/giphy.gif)' }}></div>
+                        <div className='board-list-item-profile-image'
+                             style={{backgroundImage: `url(${writerProfileImage})`}}></div>
 
                     </div>
                     <div className='board-list-item-write-box'>
-                        <div className='board-list-item-nickname'>{'hello world'}</div>
-                        <div className='board-list-item-write-datetime'>{'2024.05.26'}</div>
+                        <div className='board-list-item-nickname'>{writerNickname}</div>
+                        <div className='board-list-item-write-date'>{writeDatetime}</div>
 
 
                     </div>
                 </div>
                 <div className='board-list-item-middle'>
-                    <div className='board-list-item-title'>{'제목 입니다.'}</div>
-                    <div className='board-list-item-content'>{'내용 입니다.'}</div>
+                    <div className='board-list-item-title'>{title}</div>
+                    <div className='board-list-item-content'>{content}</div>
                 </div>
                 <div className='board-list-item-bottom'>
-                    <div className='board-list-item-count'>{'댓글 99 * 좋아요 100 * 조회수 100'}</div>
+                    <div
+                        className='board-list-item-count'>{`댓글${commentCount} * 좋아요${favoriteCount} * 조회수${viewCount}`}</div>
                 </div>
             </div>
-            <div className='board-item-image-box'>
-                <div className='board-list-item-image' style={{ backgroundImage: 'url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnFhZmF4YnluMTRza3h1cGRnaG45OWk5bWc0ODIwMTk4bXp1c2NibCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RLW9YEaSBfBMt79fm4/giphy.gif)' }}></div>
-            </div>
+            {boardTitleImage !== null && (
+                <div className='board-item-image-box'>
+                    <div className='board-list-item-image'
+                         style={{backgroundImage: `url(${boardTitleImage})`}}></div>
+                </div>
+
+            )}
+
         </div>
     )
 }
