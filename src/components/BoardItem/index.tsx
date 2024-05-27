@@ -2,13 +2,14 @@ import React from 'react';
 import './style.css';
 import {BoardListItem} from 'types/interface';
 import {useNavigate} from "react-router-dom";
+import defaultProfileImage from 'assets/image/default-profile-image.png';
 
 interface Props {
     boardListItem: BoardListItem
 }
 
 // component: board List Item 컴포넌트
-export default function BoardListItem({boardListItem}: Props) {
+export default function BoardItem({boardListItem}: Props) {
 
     // propertises //
     const {boardNumber, title, content, boardTitleImage} = boardListItem;
@@ -17,12 +18,12 @@ export default function BoardListItem({boardListItem}: Props) {
 
     // function : 내비게이트 함수 //
 
-    const navigator = useNavigate();
+    //const navigator = useNavigate();
 
     // event handler : 게시물 아이템 클릭 이벤트 처리함수 //
 
     const onClickHandler = () => {
-        navigator(boardNumber);
+       // navigator(boardNumber);
     }
 
     // render : Board List Item 컴포넌트 렌더링
@@ -32,7 +33,7 @@ export default function BoardListItem({boardListItem}: Props) {
                 <div className='board-list-item-top'>
                     <div className='board-list-item-profile-box'>
                         <div className='board-list-item-profile-image'
-                             style={{backgroundImage: `url(${writerProfileImage})`}}></div>
+                             style={{backgroundImage: `url(${writerProfileImage ? writerProfileImage : defaultProfileImage})`}}></div>
 
                     </div>
                     <div className='board-list-item-write-box'>
