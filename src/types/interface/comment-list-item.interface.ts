@@ -1,7 +1,7 @@
 export default interface CommentListItem {
     nickname : string;
     profileImage : string | null;
-    wirteDatetime: String;
+    writeDatetime: string;
     content : string;
 
 }

@@ -13,6 +13,32 @@ const latestBoardListMock: BoardListItem[] = [
         "writerNickname": "코리안 몬스터",
         "writerProfileImage": 'https://www.instantaiprompt.com/wp-content/uploads/2023/12/Luna-Lovegood-pixar-ai.jpg',
 
+    },
+    {
+        "boardNumber": 1,
+        "title":  "졸리다 자고싶다",
+        "content": "너무너무 자고싶다",
+        "boardTitleImage": null,
+        "favoriteCount": 0,
+        "commentCount": 0,
+        "viewCount": 0,
+        "writeDatetime": "2024.05.27. 23:59",
+        "writerNickname": "코리안 몬스터",
+        "writerProfileImage": null,
+
+    },
+    {
+        "boardNumber": 1,
+        "title":  "졸리다 자고싶다",
+        "content": "너무너무 자고싶다",
+        "boardTitleImage": null,
+        "favoriteCount": 0,
+        "commentCount": 0,
+        "viewCount": 0,
+        "writeDatetime": "2024.05.27. 23:59",
+        "writerNickname": "코리안 몬스터",
+        "writerProfileImage": null,
+
     }
 
 ];
