@@ -7,7 +7,6 @@ interface Props {
     favoriteListItem : FavoriteListItem;
 }
 
-
 // component : Favorite List Item 컴포넌트 //
 export default function FavoriteItem({ favoriteListItem }: Props) {
 
