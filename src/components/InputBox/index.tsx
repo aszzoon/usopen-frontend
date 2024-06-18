@@ -14,7 +14,7 @@ const InputBox = forwardRef<HTMLInputElement, Props>((props: Props, ref) => {
             <div className='inputbox-container'>
                 <input className='input'/>
                 <div className='icon-button'>
-                    <div className=''></div>
+                    <div className='icon eye-light-off-icon'></div>
                 </div>
             </div>
             <div className='inputbox-message'>{'비밀번호는 8자 이상 입력해주세요.'}</div>
