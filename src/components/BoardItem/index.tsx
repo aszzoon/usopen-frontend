@@ -18,6 +18,7 @@ export default function BoardItem({boardListItem}: Props) {
 
     // function : 내비게이트 함수 //
 
+    
     //const navigator = useNavigate();
 
     // event handler : 게시물 아이템 클릭 이벤트 처리함수 //
