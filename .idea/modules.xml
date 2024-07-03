@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../usopen_blog_frontend_20240521.iml" filepath="$PROJECT_DIR$/../usopen_blog_frontend_20240521.iml" />
+      <module fileurl="file://$PROJECT_DIR$/usopen-frontend.iml" filepath="$PROJECT_DIR$/usopen-frontend.iml" />
     </modules>
   </component>
 </project>
